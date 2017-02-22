@@ -5,3 +5,47 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Restaurant.destroy_all
+restaurants_attributes = [
+  {
+    name:         "Epicure au Bristol",
+    address:      "112 rue du Fg St-Honoré 75008 Paris",
+    phone_number: " 09 08 07 07 09",
+    category:     "french"
+
+  },
+  {
+    name:         "La truffière",
+    address:      "4 rue Blainville 75005 Paris",
+    phone_number: " 09 08 07 07 09",
+    category:     "french"
+
+  },
+  {
+    name:         "Le pré catelan",
+    address:      "route de Suresnes 75016 Paris",
+    phone_number: " 09 08 07 7777",
+    category:     "french"
+
+  },
+
+  {
+    name:         " Japan sushi",
+    address:      " 20 route de Sushi 75016 Paris",
+    phone_number: " 09 08 07 7777",
+    category:     "japanese"
+
+  },
+  {
+    name:         "Le grand belgian",
+    address:      "route de la belgique 75016 Paris",
+    phone_number: " 09 08 88 888 888 ",
+    category:     "belgian"
+  }
+]
+restaurants_attributes.each { |params| Restaurant.create!(params) }
+
+
+
+

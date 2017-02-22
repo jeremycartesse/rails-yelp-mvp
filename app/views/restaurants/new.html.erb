@@ -1,0 +1,14 @@
+<div class="container fluid text-center padded feature">
+  <div class="row">
+    <div class="col-sm-6">
+    <%= simple_form_for @restaurant do |f| %>
+        <%= f.input :name %>
+        <%= f.input :address %>
+        <%= f.input :phone_number %>
+         <%= f.label :category %>
+        <%= f.select :category, Restaurant::CATEGORIES %>
+        <%= f.button :submit %>
+      <% end %>
+      </div>
+  </div>
+  </div>
